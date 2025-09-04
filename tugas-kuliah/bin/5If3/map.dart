@@ -1,4 +1,4 @@
-void main(list<String> args) {
-map<String, dynamic> users = {"username": "Rizal"};
+void main(List<String> args) {
+Map<String, dynamic> users = {"username": "Rizal"};
 print(users);
 }

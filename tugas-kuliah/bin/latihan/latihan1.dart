@@ -5,7 +5,7 @@ void main(){
     num tinggi = 163;
     bool aktive = true;
     var Prody = "Informatika";
-    print ("nama saya : $nama");
+    print("nama saya : $nama");
     print("umur : $usia");
     print("berat badan : $berat");
     print("tinggi badan : $tinggi");
