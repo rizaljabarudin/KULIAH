@@ -14,14 +14,15 @@ class DefaultFirebaseOptions {
     }
   }
 
-  /// Konfigurasi Android
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'YOUR_ANDROID_API_KEY',
-    appId: 'YOUR_ANDROID_APP_ID',
-    messagingSenderId: 'YOUR_ANDROID_MESSAGING_SENDER_ID',
-    projectId: 'aplikasi_flutter',
-    storageBucket: 'aplikasi_flutter.appspot.com',
+    apiKey: 'AIzaSyC9uUiXUigWBwBOxeS87kcEaPcEoPDMhog',
+    appId: '1:938447450518:android:8ea8ecc416a14dd337edb7',
+    messagingSenderId: '938447450518',
+    projectId: 'aplikasiku-4f51d',
+    storageBucket: 'aplikasiku-4f51d.firebasestorage.app',
   );
+
+  /// Konfigurasi Android
 
   /// Konfigurasi iOS
   static const FirebaseOptions ios = FirebaseOptions(
@@ -34,14 +35,15 @@ class DefaultFirebaseOptions {
     iosClientId: 'YOUR_IOS_CLIENT_ID',
   );
 
-  /// Konfigurasi Web
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'YOUR_WEB_API_KEY',
-    appId: 'YOUR_WEB_APP_ID',
-    messagingSenderId: 'YOUR_WEB_MESSAGING_SENDER_ID',
-    projectId: 'aplikasi_flutter',
-    storageBucket: 'aplikasi_flutter.appspot.com',
-    authDomain: 'aplikasi_flutter.firebaseapp.com',
-    measurementId: 'YOUR_WEB_MEASUREMENT_ID',
+    apiKey: 'AIzaSyDcfCOIRLI-TU8rbum3ujNOhA__OEndAO0',
+    appId: '1:938447450518:web:dd7f0439458e5eda37edb7',
+    messagingSenderId: '938447450518',
+    projectId: 'aplikasiku-4f51d',
+    authDomain: 'aplikasiku-4f51d.firebaseapp.com',
+    storageBucket: 'aplikasiku-4f51d.firebasestorage.app',
+    measurementId: 'G-BQ4X6BNPXV',
   );
+
+  /// Konfigurasi Web
 }

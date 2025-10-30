@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "938447450518",
+    "project_id": "aplikasiku-4f51d",
+    "storage_bucket": "aplikasiku-4f51d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938447450518:android:8ea8ecc416a14dd337edb7",
+        "android_client_info": {
+          "package_name": "com.example.aplikasi_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9uUiXUigWBwBOxeS87kcEaPcEoPDMhog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

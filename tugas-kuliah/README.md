@@ -1,2 +1,4 @@
-git branch -M main A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+Nama : Rizal Jabarudin
+NPM  : 07352311187
+
+Link Youtube : https://youtube.com/live/lc4hLWbAZpw

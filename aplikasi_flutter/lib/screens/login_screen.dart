@@ -24,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: const Text('Aplikasi Flutter - Toko Pancing'),
+        title: const Text('TOKO PANCING Ngofa Mancing'),
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
@@ -53,6 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(height: 20),
                     TextField(
                       controller: _email,
+                      keyboardType: TextInputType.emailAddress,
                       style: const TextStyle(color: Colors.white),
                       decoration: const InputDecoration(
                         labelText: 'Email',
@@ -101,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 _error = null;
                               });
 
-                              await auth.initFirebase();
+                              // Tidak perlu lagi memanggil initFirebase()
                               String? err;
                               if (_isLogin) {
                                 err = await auth.signIn(
@@ -139,7 +140,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                     const SizedBox(height: 8),
                     TextButton(
-                      onPressed: () => setState(() => _isLogin = !_isLogin),
+                      onPressed: () {
+                        setState(() {
+                          _isLogin = !_isLogin;
+                          _error = null;
+                        });
+                      },
                       child: Text(
                         _isLogin
                             ? 'Belum punya akun? Daftar'

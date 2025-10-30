@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:aplikasi_flutter/screens/login_screen.dart';
-import 'package:aplikasi_flutter/services/db_service.dart';
+import 'package:provider/provider.dart';
 import 'package:aplikasi_flutter/services/auth_service.dart';
+import 'package:aplikasi_flutter/screens/login_screen.dart';
 import 'package:aplikasi_flutter/screens/product_list_screen.dart';
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  // ✅ Inisialisasi Firebase
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-
-  // ✅ Inisialisasi database lokal (SQLite)
-  await DBService.instance.init();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(const MyApp());
 }
@@ -26,23 +18,35 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => AuthService.instance),
-        ChangeNotifierProvider(create: (_) => DBService.instance),
-      ],
+    return ChangeNotifierProvider<AuthService>.value(
+      value: AuthService.instance,
       child: Consumer<AuthService>(
         builder: (context, auth, _) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            theme: ThemeData.dark().copyWith(
-              colorScheme: ThemeData.dark().colorScheme.copyWith(
-                primary: Colors.tealAccent,
+            title: 'TOKO PANCING',
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+              scaffoldBackgroundColor: Colors.white,
+              appBarTheme: const AppBarTheme(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
               ),
             ),
-            home: auth.isLoggedIn
-                ? const ProductListScreen()
-                : const LoginScreen(),
+            // 🔹 Tambahkan FutureBuilder agar menunggu status login siap
+            home: FutureBuilder(
+              future: Future.delayed(const Duration(milliseconds: 500)),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState != ConnectionState.done) {
+                  return const Scaffold(
+                    body: Center(child: CircularProgressIndicator()),
+                  );
+                }
+                return auth.isLoggedIn
+                    ? const ProductListScreen()
+                    : const LoginScreen();
+              },
+            ),
           );
         },
       ),

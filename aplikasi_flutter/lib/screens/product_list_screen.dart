@@ -23,7 +23,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Toko Pancing'),
+        title: const Text('NGOFA MANCING'),
         centerTitle: true,
         backgroundColor: Colors.teal[800],
       ),
@@ -129,18 +129,18 @@ class _ProductListScreenState extends State<ProductListScreen> {
           heroTag: 'cart',
           backgroundColor: Colors.tealAccent[700],
           child: const Icon(Icons.shopping_cart, color: Colors.white),
-          onPressed: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (_) => const CartScreen()),
-          ),
+          onPressed: () => Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (_) => const CartScreen())),
         ),
         const SizedBox(height: 12),
         FloatingActionButton(
           heroTag: 'add',
           backgroundColor: Colors.greenAccent[700],
           child: const Icon(Icons.add, color: Colors.white),
-          onPressed: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (_) => const ProductEditScreen()),
-          ),
+          onPressed: () => Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (_) => const ProductEditScreen())),
         ),
         const SizedBox(height: 12),
         FloatingActionButton(
