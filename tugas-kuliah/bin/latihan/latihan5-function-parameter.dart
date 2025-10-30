@@ -1,6 +1,9 @@
-main()
-void sapa(nama){
-print("Hallo selamat datang $nama");
+void main() {
+  // Panggil fungsi sapa dengan argumen "Faqih"
+  sapa("Faqih");
+}
 
-Sapa("faqih");
+// Fungsi sapa menerima satu parameter bernama 'nama'
+void sapa(String nama) {
+  print("Halo selamat datang $nama");
 }

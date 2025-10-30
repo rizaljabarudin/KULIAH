@@ -1,10 +1,15 @@
 import 'dart:io';
 
 void main() {
-    stdout.write("Masukan panjang :");
-    print(panjang);
-    stdout.write("Masukan lebar :");
-    print(lebar);
-    String? panjang = stdin.readLineSync();
-    print(panjang);
+  // Minta input panjang
+  stdout.write("Masukkan panjang: ");
+  String? panjangInput = stdin.readLineSync();
+  
+  // Minta input lebar
+  stdout.write("Masukkan lebar: ");
+  String? lebarInput = stdin.readLineSync();
+  
+  // Tampilkan hasil input
+  print("Panjang: $panjangInput");
+  print("Lebar  : $lebarInput");
 }

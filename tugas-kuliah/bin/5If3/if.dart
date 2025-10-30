@@ -1,24 +1,22 @@
-// void main(){
-//     int nilaiMahasiswa = 80;
-//     if (nilaiMahasiswa > 90){
-//         print("A");
-//     } else if (nilaiMahasiswa >80){
-//         print("B");
-//         else if (nilaiMahasiswa >70){
-//             print("AB");
-//         } else if (nilaiMahasiswa >60){
-//             print("C");
-//         }else if (nilaiMahasiswa >50){
-//             print("D");
-        
-//     }
-//         }
-//         }
+import 'dart:io';
 
-void main(){
-    stdout.write("cek nilai Mhasiswa :");
-    int nilai = int.parse(stdin.readlineSync()!);
-    if (nilai >=90){
-        print("")
-    }
+void main() {
+  // Minta input nilai dari user
+  stdout.write("Cek nilai mahasiswa: ");
+  int nilai = int.parse(stdin.readLineSync()!);
+
+  // Mengevaluasi nilai dengan if-else
+  if (nilai >= 90) {
+    print("Nilai: A");
+  } else if (nilai >= 80) {
+    print("Nilai: B");
+  } else if (nilai >= 70) {
+    print("Nilai: AB");
+  } else if (nilai >= 60) {
+    print("Nilai: C");
+  } else if (nilai >= 50) {
+    print("Nilai: D");
+  } else {
+    print("Nilai: E (Tidak Lulus)");
+  }
 }

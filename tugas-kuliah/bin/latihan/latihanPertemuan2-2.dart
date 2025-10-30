@@ -1,4 +1,9 @@
-void main(List<String> args){
-    map<String>, dynamic> user = {"username", "password", "age": 20};
-    print(user);
+void main(List<String> args) {
+  Map<String, dynamic> user = {
+    "username": "admin",
+    "password": "12345",
+    "age": 20
+  };
+
+  print(user);
 }
